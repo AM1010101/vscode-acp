@@ -33,6 +33,13 @@ suite("agents", () => {
       assert.ok(claude, "claude-code agent should exist");
       assert.strictEqual(claude?.command, "npx");
     });
+
+    test("should include kiro agent", () => {
+      const kiro = AGENTS.find((a) => a.id === "kiro");
+      assert.ok(kiro, "kiro agent should exist");
+      assert.strictEqual(kiro?.command, "kiro-cli");
+      assert.deepStrictEqual(kiro?.args, ["acp"]);
+    });
   });
 
   suite("getAgent", () => {

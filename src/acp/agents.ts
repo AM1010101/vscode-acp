@@ -67,6 +67,12 @@ export const AGENTS: AgentConfig[] = [
     args: ["--acp"],
   },
   {
+    id: "kiro",
+    name: "Kiro CLI",
+    command: "kiro-cli",
+    args: ["acp"],
+  },
+  {
     id: "mistral-vibe",
     name: "Mistral Vibe",
     command: "vibe",
